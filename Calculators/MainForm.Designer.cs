@@ -419,6 +419,7 @@
             this.radioButtonUS.TabStop = true;
             this.radioButtonUS.Text = "US Unit (lbs, feet)";
             this.radioButtonUS.UseVisualStyleBackColor = true;
+            this.radioButtonUS.CheckedChanged += new System.EventHandler(this.radioButtonUS_CheckedChanged);
             // 
             // radioButtonMetric
             // 
@@ -432,6 +433,7 @@
             this.radioButtonMetric.TabStop = true;
             this.radioButtonMetric.Text = "Metric unit (kg, cm)";
             this.radioButtonMetric.UseVisualStyleBackColor = true;
+            this.radioButtonMetric.CheckedChanged += new System.EventHandler(this.radioButtonMetric_CheckedChanged);
             // 
             // textBoxBmiWeight
             // 

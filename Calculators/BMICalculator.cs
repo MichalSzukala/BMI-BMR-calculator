@@ -14,20 +14,17 @@ namespace Calculators
         private UnitTypes unit;
 
 
-        //Setter for name
         public void SetName(string name)
         {
             if (!string.IsNullOrEmpty(name))
                 this.name = name;
         }
 
-        //Getter for name
         public string GetName()
         {
             return name;
         }
 
-        //Setter for height
         public void SetHeight(double height)
         {
             if (height > 0)
@@ -39,33 +36,27 @@ namespace Calculators
             }
         }
 
-        //Getter for height
         public double GetHeight()
         {
             return height;
         }
-
-        //Setter for weight
         public void SetWeight(double weight)
         {
             if (weight > 0)
                 this.weight = weight;
         }
 
-        //Getter for weight
         public double GetWeight()
         {
             return weight;
         }
 
-        //Setter for unit
         public void SetUnit(UnitTypes value)
         {
             this.unit = value;
         }
 
 
-        //Getters for unit
         public UnitTypes GetUnit()
         {
             return unit;
