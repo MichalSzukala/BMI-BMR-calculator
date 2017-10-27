@@ -32,7 +32,74 @@ namespace Calculators
             //groupFuel.Enabled = false;
         }
 
-        
+        //button BMI calculate event handler
+        private void buttonBmiCalculate_Click(object sender, EventArgs e)
+        {
+            bool ok = ReadInputBMI();
+            if (ok)
+                DisplayResultsBMI();
+        }
+
+        //will veryfy if input for BMI calculation is correct 
+        private bool ReadInputBMI()
+        {
+            bool okHeight = ReadInputBMIHeight();
+            bool okWeight = ReadInputBMIWeight();
+            ReadInputBMIName();
+            return okHeight;
+        }
+
+        //will veryfy if height in BMI calculations is correct
+        private bool ReadInputBMIHeight()
+        {
+            bool ok = true;
+            string strHight = textBoxBmiHeight.Text;
+            strHight = strHight.Trim();
+
+            double amountHight = 0.0;
+            ok = double.TryParse(strHight, out amountHight);
+            if (ok)
+            {
+                bmiCalculator.SetHeight(amountHight);
+            }
+            else
+                ok = false;
+
+            if (!ok)
+                MessageBox.Show("Invalid height", "Error");
+            return ok;
+        }
+
+        //will veryfy if weight in BMI calculations is correct
+        private bool ReadInputBMIWeight()
+        {
+            bool ok = true;
+            string strWeight = textBoxBmiWeight.Text;
+            strWeight = strWeight.Trim();
+
+            double amountWeight = 0.0;
+            ok = double.TryParse(strWeight, out amountWeight);
+            if (ok)
+                bmiCalculator.SetWeight(amountWeight);
+            else
+                ok = false;
+
+            if(!ok)
+                MessageBox.Show("Invalid weight", "Error");
+            return ok;
+        }
+
+        //will veryfy if name in BMI calculations is correct
+        private void ReadInputBMIName()
+        {
+            string name = textBoxBmiName.Text;
+            if (name == string.Empty)
+                bmiCalculator.SetName("No name");
+            else
+                bmiCalculator.SetName(name);
+        }
+
+
         //will display results for BMI calculations
         public void DisplayResultsBMI()
         {

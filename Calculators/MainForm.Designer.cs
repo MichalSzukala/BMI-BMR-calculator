@@ -406,6 +406,7 @@
             this.buttonBmiCalculate.TabIndex = 8;
             this.buttonBmiCalculate.Text = "Calculate";
             this.buttonBmiCalculate.UseVisualStyleBackColor = true;
+            this.buttonBmiCalculate.Click += new System.EventHandler(this.buttonBmiCalculate_Click);
             // 
             // radioButtonUS
             // 
