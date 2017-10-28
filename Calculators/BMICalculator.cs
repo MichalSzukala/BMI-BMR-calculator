@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Calculators
-{
+{   //class is taking care of Body Mass Index calculations 
     class BMICalculator
     {
         private string name = "No name";

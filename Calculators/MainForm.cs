@@ -13,6 +13,7 @@ namespace Calculators
     public partial class MainForm : Form
     {
         private BMICalculator bmiCalculator = new BMICalculator();
+        private FuelCalculator fuelCalculator = new FuelCalculator();
 
         public MainForm()
         {
@@ -46,7 +47,7 @@ namespace Calculators
             bool okHeight = ReadInputBMIHeight();
             bool okWeight = ReadInputBMIWeight();
             ReadInputBMIName();
-            return okHeight;
+            return okHeight && okWeight;
         }
 
         //will veryfy if height in BMI calculations is correct
@@ -128,6 +129,119 @@ namespace Calculators
                 labelBmiWeight.Text = "Weight (lbs)";
                 bmiCalculator.SetUnit(UnitTypes.American);
             }
+        }
+
+        ////button Fuel calculate event handler
+        private void buttonFuelCalculate_Click(object sender, EventArgs e)
+        {
+            bool ok = ReadInputFuel();
+            if (ok)
+                DisplayResultsFuel();
+        }
+
+        //will veryfy if input for Fuel calculation is correct 
+        private bool ReadInputFuel()
+        {
+            bool okCurrentReading = ReadInputFuelCurrentReading();
+            bool okPreviousReading = ReadInputFuelPreviousReading();
+            bool okAmountOfFuel = ReadInputAmountOfFuel();
+            bool okPriceOfPetrol = ReadInputPriceOfPetrol();
+           
+            return okCurrentReading && okPreviousReading && okAmountOfFuel && okPriceOfPetrol;
+        }
+
+        //will veryfy if Current Odometer Reading is correct
+        private bool ReadInputFuelCurrentReading()
+        {
+            bool ok = true;
+            string strCurrentOdometer = textBoxFuelCurrentOdometer.Text;
+            strCurrentOdometer = strCurrentOdometer.Trim();
+
+            double currentOdometer = 0.0;
+            ok = double.TryParse(strCurrentOdometer, out currentOdometer);
+            if (ok)
+            {
+                fuelCalculator.SetCurrentOdometer(currentOdometer);
+            }
+            else
+                ok = false;
+
+            if (!ok)
+                MessageBox.Show("Invalid Current Odometer Value", "Error");
+            return ok;
+        }
+
+        //will veryfy if Previous Odometer Reading is correct
+        private bool ReadInputFuelPreviousReading()
+        {
+            bool ok = true;
+            string strPreviousOdometer = textBoxFuelPreviousOdometer.Text;
+            strPreviousOdometer = strPreviousOdometer.Trim();
+
+            double previousOdometer = 0.0;
+            ok = double.TryParse(strPreviousOdometer, out previousOdometer);
+            if (ok)
+            {
+                fuelCalculator.SetPreviousOdometer(previousOdometer);
+            }
+            else
+                ok = false;
+
+            if (!ok)
+                MessageBox.Show("Invalid Previous Odometer Value", "Error");
+            return ok;
+        }
+    
+
+        //will veryfy if Amount of Fuel Reading is correct
+        private bool ReadInputAmountOfFuel()
+        {
+            bool ok = true;
+            string strAmountOfFuel = textBoxFuelAmount.Text;
+            strAmountOfFuel = strAmountOfFuel.Trim();
+
+            double amountOfFuel = 0.0;
+            ok = double.TryParse(strAmountOfFuel, out amountOfFuel);
+            if (ok)
+            {
+                fuelCalculator.SetAmountOfFuel(amountOfFuel);
+            }
+            else
+                ok = false;
+
+            if (!ok)
+                MessageBox.Show("Invalid Amount of Fuel", "Error");
+            return ok;
+        }
+
+
+        //will veryfy if price of petrol is correct
+        private bool ReadInputPriceOfPetrol()
+        {
+            bool ok = true;
+            string strPriceOfFuel = textBoxFuelPrice.Text;
+            strPriceOfFuel = strPriceOfFuel.Trim();
+
+            double priceOfFuel = 0.0;
+            ok = double.TryParse(strPriceOfFuel, out priceOfFuel);
+            if (ok)
+            {
+                fuelCalculator.SetPriceOfFuel(priceOfFuel);
+            }
+            else
+                ok = false;
+
+            if (!ok)
+                MessageBox.Show("Invalid Price of Fuel", "Error");
+            return ok;
+
+        }
+
+
+        //will display results for Fuel calculations
+        public void DisplayResultsFuel()
+        {
+            //..................
         }
     }
 }

@@ -41,10 +41,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.buttonFuelCalculate = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxFuelPrice = new System.Windows.Forms.TextBox();
+            this.textBoxFuelAmount = new System.Windows.Forms.TextBox();
+            this.textBoxFuelPreviousOdometer = new System.Windows.Forms.TextBox();
+            this.textBoxFuelCurrentOdometer = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -75,10 +75,10 @@
             // 
             this.groupFuel.Controls.Add(this.groupBox2);
             this.groupFuel.Controls.Add(this.buttonFuelCalculate);
-            this.groupFuel.Controls.Add(this.textBox4);
-            this.groupFuel.Controls.Add(this.textBox3);
-            this.groupFuel.Controls.Add(this.textBox2);
-            this.groupFuel.Controls.Add(this.textBox1);
+            this.groupFuel.Controls.Add(this.textBoxFuelPrice);
+            this.groupFuel.Controls.Add(this.textBoxFuelAmount);
+            this.groupFuel.Controls.Add(this.textBoxFuelPreviousOdometer);
+            this.groupFuel.Controls.Add(this.textBoxFuelCurrentOdometer);
             this.groupFuel.Controls.Add(this.label4);
             this.groupFuel.Controls.Add(this.label3);
             this.groupFuel.Controls.Add(this.label2);
@@ -90,7 +90,7 @@
             this.groupFuel.Size = new System.Drawing.Size(455, 376);
             this.groupFuel.TabIndex = 0;
             this.groupFuel.TabStop = false;
-            this.groupFuel.Text = "Fuel";   
+            this.groupFuel.Text = "Fuel";
             // 
             // groupBox2
             // 
@@ -236,34 +236,35 @@
             this.buttonFuelCalculate.TabIndex = 8;
             this.buttonFuelCalculate.Text = "Calculate";
             this.buttonFuelCalculate.UseVisualStyleBackColor = true;
+            this.buttonFuelCalculate.Click += new System.EventHandler(this.buttonFuelCalculate_Click);
             // 
-            // textBox4
+            // textBoxFuelPrice
             // 
-            this.textBox4.Location = new System.Drawing.Point(362, 95);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(68, 26);
-            this.textBox4.TabIndex = 7;
+            this.textBoxFuelPrice.Location = new System.Drawing.Point(362, 95);
+            this.textBoxFuelPrice.Name = "textBoxFuelPrice";
+            this.textBoxFuelPrice.Size = new System.Drawing.Size(68, 26);
+            this.textBoxFuelPrice.TabIndex = 7;
             // 
-            // textBox3
+            // textBoxFuelAmount
             // 
-            this.textBox3.Location = new System.Drawing.Point(362, 68);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(68, 26);
-            this.textBox3.TabIndex = 6;
+            this.textBoxFuelAmount.Location = new System.Drawing.Point(362, 68);
+            this.textBoxFuelAmount.Name = "textBoxFuelAmount";
+            this.textBoxFuelAmount.Size = new System.Drawing.Size(68, 26);
+            this.textBoxFuelAmount.TabIndex = 6;
             // 
-            // textBox2
+            // textBoxFuelPreviousOdometer
             // 
-            this.textBox2.Location = new System.Drawing.Point(284, 41);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(146, 26);
-            this.textBox2.TabIndex = 5;
+            this.textBoxFuelPreviousOdometer.Location = new System.Drawing.Point(284, 41);
+            this.textBoxFuelPreviousOdometer.Name = "textBoxFuelPreviousOdometer";
+            this.textBoxFuelPreviousOdometer.Size = new System.Drawing.Size(146, 26);
+            this.textBoxFuelPreviousOdometer.TabIndex = 5;
             // 
-            // textBox1
+            // textBoxFuelCurrentOdometer
             // 
-            this.textBox1.Location = new System.Drawing.Point(284, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 26);
-            this.textBox1.TabIndex = 4;
+            this.textBoxFuelCurrentOdometer.Location = new System.Drawing.Point(284, 16);
+            this.textBoxFuelCurrentOdometer.Name = "textBoxFuelCurrentOdometer";
+            this.textBoxFuelCurrentOdometer.Size = new System.Drawing.Size(146, 26);
+            this.textBoxFuelCurrentOdometer.TabIndex = 4;
             // 
             // label4
             // 
@@ -526,10 +527,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button buttonFuelCalculate;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxFuelPrice;
+        private System.Windows.Forms.TextBox textBoxFuelAmount;
+        private System.Windows.Forms.TextBox textBoxFuelPreviousOdometer;
+        private System.Windows.Forms.TextBox textBoxFuelCurrentOdometer;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
