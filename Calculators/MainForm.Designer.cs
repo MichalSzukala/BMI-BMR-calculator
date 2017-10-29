@@ -30,11 +30,11 @@
         {
             this.groupFuel = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.labelFuelResultsCost = new System.Windows.Forms.Label();
+            this.labelFuelResults4 = new System.Windows.Forms.Label();
+            this.labelFuelResults3 = new System.Windows.Forms.Label();
+            this.labelFuelResults2 = new System.Windows.Forms.Label();
+            this.labelFuelResults1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -94,11 +94,11 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.labelFuelResultsCost);
+            this.groupBox2.Controls.Add(this.labelFuelResults4);
+            this.groupBox2.Controls.Add(this.labelFuelResults3);
+            this.groupBox2.Controls.Add(this.labelFuelResults2);
+            this.groupBox2.Controls.Add(this.labelFuelResults1);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
@@ -113,65 +113,60 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Results";
             // 
-            // label14
+            // labelFuelResultsCost
             // 
-            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(334, 137);
-            this.label14.Name = "label14";
-            this.label14.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label14.Size = new System.Drawing.Size(63, 20);
-            this.label14.TabIndex = 9;
-            this.label14.Text = "label14";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelFuelResultsCost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelFuelResultsCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFuelResultsCost.Location = new System.Drawing.Point(334, 137);
+            this.labelFuelResultsCost.Name = "labelFuelResultsCost";
+            this.labelFuelResultsCost.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelFuelResultsCost.Size = new System.Drawing.Size(63, 20);
+            this.labelFuelResultsCost.TabIndex = 9;
+            this.labelFuelResultsCost.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label13
+            // labelFuelResults4
             // 
-            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(334, 107);
-            this.label13.Name = "label13";
-            this.label13.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label13.Size = new System.Drawing.Size(63, 23);
-            this.label13.TabIndex = 8;
-            this.label13.Text = "label13";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelFuelResults4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelFuelResults4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFuelResults4.Location = new System.Drawing.Point(334, 107);
+            this.labelFuelResults4.Name = "labelFuelResults4";
+            this.labelFuelResults4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelFuelResults4.Size = new System.Drawing.Size(63, 23);
+            this.labelFuelResults4.TabIndex = 8;
+            this.labelFuelResults4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label12
+            // labelFuelResults3
             // 
-            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(334, 79);
-            this.label12.Name = "label12";
-            this.label12.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label12.Size = new System.Drawing.Size(63, 20);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "label12";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelFuelResults3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelFuelResults3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFuelResults3.Location = new System.Drawing.Point(334, 79);
+            this.labelFuelResults3.Name = "labelFuelResults3";
+            this.labelFuelResults3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelFuelResults3.Size = new System.Drawing.Size(63, 20);
+            this.labelFuelResults3.TabIndex = 7;
+            this.labelFuelResults3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label11
+            // labelFuelResults2
             // 
-            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(334, 48);
-            this.label11.Name = "label11";
-            this.label11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label11.Size = new System.Drawing.Size(63, 23);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "label11";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelFuelResults2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelFuelResults2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFuelResults2.Location = new System.Drawing.Point(334, 48);
+            this.labelFuelResults2.Name = "labelFuelResults2";
+            this.labelFuelResults2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelFuelResults2.Size = new System.Drawing.Size(63, 23);
+            this.labelFuelResults2.TabIndex = 6;
+            this.labelFuelResults2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label10
+            // labelFuelResults1
             // 
-            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(334, 22);
-            this.label10.Name = "label10";
-            this.label10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label10.Size = new System.Drawing.Size(63, 20);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "label10";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelFuelResults1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelFuelResults1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFuelResults1.Location = new System.Drawing.Point(334, 22);
+            this.labelFuelResults1.Name = "labelFuelResults1";
+            this.labelFuelResults1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelFuelResults1.Size = new System.Drawing.Size(63, 20);
+            this.labelFuelResults1.TabIndex = 5;
+            this.labelFuelResults1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label9
             // 
@@ -516,11 +511,11 @@
 
         private System.Windows.Forms.GroupBox groupFuel;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label labelFuelResultsCost;
+        private System.Windows.Forms.Label labelFuelResults4;
+        private System.Windows.Forms.Label labelFuelResults3;
+        private System.Windows.Forms.Label labelFuelResults2;
+        private System.Windows.Forms.Label labelFuelResults1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;

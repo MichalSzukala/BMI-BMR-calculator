@@ -131,7 +131,7 @@ namespace Calculators
             }
         }
 
-        ////button Fuel calculate event handler
+        //button Fuel calculate event handler
         private void buttonFuelCalculate_Click(object sender, EventArgs e)
         {
             bool ok = ReadInputFuel();
@@ -142,11 +142,11 @@ namespace Calculators
         //will veryfy if input for Fuel calculation is correct 
         private bool ReadInputFuel()
         {
-            bool okCurrentReading = ReadInputFuelCurrentReading();
             bool okPreviousReading = ReadInputFuelPreviousReading();
+            bool okCurrentReading = ReadInputFuelCurrentReading();
             bool okAmountOfFuel = ReadInputAmountOfFuel();
             bool okPriceOfPetrol = ReadInputPriceOfPetrol();
-           
+            
             return okCurrentReading && okPreviousReading && okAmountOfFuel && okPriceOfPetrol;
         }
 
@@ -159,7 +159,7 @@ namespace Calculators
 
             double currentOdometer = 0.0;
             ok = double.TryParse(strCurrentOdometer, out currentOdometer);
-            if (ok)
+            if (ok && currentOdometer > fuelCalculator.GetPreviousOdometer())
             {
                 fuelCalculator.SetCurrentOdometer(currentOdometer);
             }
@@ -241,7 +241,11 @@ namespace Calculators
         //will display results for Fuel calculations
         public void DisplayResultsFuel()
         {
-            //..................
+            labelFuelResults1.Text = fuelCalculator.kmPerLit().ToString("0.00");
+            labelFuelResults2.Text = fuelCalculator.litPerKm().ToString("0.00");
+            labelFuelResults3.Text = fuelCalculator.litersPerMetricMile().ToString("0.00");
+            labelFuelResults4.Text = fuelCalculator.literPerSwedMil().ToString("0.00");
+            labelFuelResultsCost.Text = fuelCalculator.costPerKm().ToString("0.00");
         }
     }
 }

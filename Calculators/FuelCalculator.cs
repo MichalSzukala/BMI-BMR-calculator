@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calculators
 {
+    //class is taking care of Fuel consumption calculations 
     class FuelCalculator
     {
         private double currentOdometer = 0;
@@ -56,5 +57,43 @@ namespace Calculators
         {
             return priceOfFuel;
         }
+
+        //Calculating distance
+        public double distance()
+        {
+            return currentOdometer - previousOdometer;
+        }
+
+        //Calaculating consumption liter per km
+        public double litPerKm()
+        {
+            return amountOfFuel / distance();
+        }
+
+        //Calaculating consumption km per liter
+        public double kmPerLit()
+        {
+            return  distance() / amountOfFuel;
+        }
+
+        //Calaculating consumption liter per metric mile
+        public double litersPerMetricMile()
+        {
+            const double kmToMileFactor = 0.621371192;
+            return litPerKm() / kmToMileFactor;
+        }
+
+        //Consumption per Swedish mil – Values in Swedish mile (mil)
+        public double literPerSwedMil()
+        {
+            return litPerKm() * 10;
+        }
+
+        //Cost per km
+        public double costPerKm()
+        {
+            return litPerKm() * priceOfFuel;
+        }
+
     }
 }

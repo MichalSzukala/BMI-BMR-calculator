@@ -40,7 +40,6 @@ namespace Calculators
         {
             return height;
         }
-
         public void SetWeight(double weight)
         {
             if (weight > 0)
