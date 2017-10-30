@@ -30,7 +30,6 @@ namespace Calculators
             labelBmiWeight.Text = "Weight (lbs)";
             textBoxBmiHeight.Text = string.Empty;
             textBoxBmiWeight.Text = string.Empty;
-            //groupFuel.Enabled = false;
         }
 
         //button BMI calculate event handler

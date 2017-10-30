@@ -42,6 +42,7 @@ namespace Calculators
                 amountOfFuel = value;
         }
 
+
         public double GetAmountOfFuel()
         {
             return amountOfFuel;
