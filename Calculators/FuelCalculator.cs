@@ -14,6 +14,7 @@ namespace Calculators
         private double amountOfFuel = 0;
         private double priceOfFuel = 0;
 
+
         public void SetCurrentOdometer(double value)
         {
             if (value >= 0)
@@ -41,7 +42,6 @@ namespace Calculators
             if (value >= 0)
                 amountOfFuel = value;
         }
-
 
         public double GetAmountOfFuel()
         {

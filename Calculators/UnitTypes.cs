@@ -11,4 +11,13 @@ namespace Calculators
         Metric,
         American
     }
+
+    enum ActivityLevel
+    {
+        Zero,
+        Light,
+        Moderate,
+        Very,
+        VeryMuch
+    }
 }

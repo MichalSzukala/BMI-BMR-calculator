@@ -1,4 +1,7 @@
-﻿namespace Calculators
+﻿//Michal Szukala
+//23 October 2017
+
+namespace Calculators
 {
     partial class MainForm
     {
@@ -66,19 +69,18 @@
             this.textBoxBmiName = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBoxBMR = new System.Windows.Forms.GroupBox();
-            this.radioButtonBMRFemale = new System.Windows.Forms.RadioButton();
-            this.radioButtonBMRMale = new System.Windows.Forms.RadioButton();
-            this.labelBMRAge = new System.Windows.Forms.Label();
-            this.textBoxBMRAge = new System.Windows.Forms.TextBox();
-            this.groupBoxActivityLevels = new System.Windows.Forms.GroupBox();
-            this.buttonBMRCalculate = new System.Windows.Forms.Button();
-            this.radioButtonActivityLevel1 = new System.Windows.Forms.RadioButton();
-            this.radioButtonActivityLevel2 = new System.Windows.Forms.RadioButton();
-            this.radioButtonActivityLevel3 = new System.Windows.Forms.RadioButton();
-            this.radioButtonActivityLevel4 = new System.Windows.Forms.RadioButton();
-            this.radioButtonActivityLevel5 = new System.Windows.Forms.RadioButton();
             this.listBoxBMR = new System.Windows.Forms.ListBox();
-            this.buttonBMRUnselect = new System.Windows.Forms.Button();
+            this.buttonBMRCalculate = new System.Windows.Forms.Button();
+            this.groupBoxActivityLevels = new System.Windows.Forms.GroupBox();
+            this.radioButtonActivityLevel5 = new System.Windows.Forms.RadioButton();
+            this.radioButtonActivityLevel4 = new System.Windows.Forms.RadioButton();
+            this.radioButtonActivityLevel3 = new System.Windows.Forms.RadioButton();
+            this.radioButtonActivityLevel2 = new System.Windows.Forms.RadioButton();
+            this.radioButtonActivityLevel1 = new System.Windows.Forms.RadioButton();
+            this.textBoxBMRAge = new System.Windows.Forms.TextBox();
+            this.labelBMRAge = new System.Windows.Forms.Label();
+            this.radioButtonBMRMale = new System.Windows.Forms.RadioButton();
+            this.radioButtonBMRFemale = new System.Windows.Forms.RadioButton();
             this.groupFuel.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -504,7 +506,6 @@
             // 
             // groupBoxBMR
             // 
-            this.groupBoxBMR.Controls.Add(this.buttonBMRUnselect);
             this.groupBoxBMR.Controls.Add(this.listBoxBMR);
             this.groupBoxBMR.Controls.Add(this.buttonBMRCalculate);
             this.groupBoxBMR.Controls.Add(this.groupBoxActivityLevels);
@@ -521,51 +522,27 @@
             this.groupBoxBMR.TabStop = false;
             this.groupBoxBMR.Text = "BMR";
             // 
-            // radioButtonBMRFemale
+            // listBoxBMR
             // 
-            this.radioButtonBMRFemale.AutoSize = true;
-            this.radioButtonBMRFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonBMRFemale.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.radioButtonBMRFemale.Location = new System.Drawing.Point(27, 36);
-            this.radioButtonBMRFemale.Name = "radioButtonBMRFemale";
-            this.radioButtonBMRFemale.Size = new System.Drawing.Size(72, 21);
-            this.radioButtonBMRFemale.TabIndex = 0;
-            this.radioButtonBMRFemale.TabStop = true;
-            this.radioButtonBMRFemale.Text = "Female";
-            this.radioButtonBMRFemale.UseVisualStyleBackColor = true;
+            this.listBoxBMR.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.listBoxBMR.FormattingEnabled = true;
+            this.listBoxBMR.ItemHeight = 18;
+            this.listBoxBMR.Location = new System.Drawing.Point(472, 35);
+            this.listBoxBMR.Name = "listBoxBMR";
+            this.listBoxBMR.Size = new System.Drawing.Size(541, 364);
+            this.listBoxBMR.TabIndex = 6;
             // 
-            // radioButtonBMRMale
+            // buttonBMRCalculate
             // 
-            this.radioButtonBMRMale.AutoSize = true;
-            this.radioButtonBMRMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonBMRMale.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.radioButtonBMRMale.Location = new System.Drawing.Point(129, 35);
-            this.radioButtonBMRMale.Name = "radioButtonBMRMale";
-            this.radioButtonBMRMale.Size = new System.Drawing.Size(56, 21);
-            this.radioButtonBMRMale.TabIndex = 1;
-            this.radioButtonBMRMale.TabStop = true;
-            this.radioButtonBMRMale.Text = "Male";
-            this.radioButtonBMRMale.UseVisualStyleBackColor = true;
-            // 
-            // labelBMRAge
-            // 
-            this.labelBMRAge.AutoSize = true;
-            this.labelBMRAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBMRAge.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelBMRAge.Location = new System.Drawing.Point(41, 76);
-            this.labelBMRAge.Name = "labelBMRAge";
-            this.labelBMRAge.Size = new System.Drawing.Size(33, 17);
-            this.labelBMRAge.TabIndex = 2;
-            this.labelBMRAge.Text = "Age";
-            // 
-            // textBoxBMRAge
-            // 
-            this.textBoxBMRAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBMRAge.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.textBoxBMRAge.Location = new System.Drawing.Point(129, 70);
-            this.textBoxBMRAge.Name = "textBoxBMRAge";
-            this.textBoxBMRAge.Size = new System.Drawing.Size(62, 22);
-            this.textBoxBMRAge.TabIndex = 3;
+            this.buttonBMRCalculate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBMRCalculate.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonBMRCalculate.Location = new System.Drawing.Point(129, 424);
+            this.buttonBMRCalculate.Name = "buttonBMRCalculate";
+            this.buttonBMRCalculate.Size = new System.Drawing.Size(200, 26);
+            this.buttonBMRCalculate.TabIndex = 5;
+            this.buttonBMRCalculate.Text = "Calculate";
+            this.buttonBMRCalculate.UseVisualStyleBackColor = true;
+            this.buttonBMRCalculate.Click += new System.EventHandler(this.buttonBMRCalculate_Click);
             // 
             // groupBoxActivityLevels
             // 
@@ -583,55 +560,18 @@
             this.groupBoxActivityLevels.TabStop = false;
             this.groupBoxActivityLevels.Text = "Activity level per week";
             // 
-            // buttonBMRCalculate
+            // radioButtonActivityLevel5
             // 
-            this.buttonBMRCalculate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBMRCalculate.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.buttonBMRCalculate.Location = new System.Drawing.Point(129, 424);
-            this.buttonBMRCalculate.Name = "buttonBMRCalculate";
-            this.buttonBMRCalculate.Size = new System.Drawing.Size(200, 26);
-            this.buttonBMRCalculate.TabIndex = 5;
-            this.buttonBMRCalculate.Text = "Calculate";
-            this.buttonBMRCalculate.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonActivityLevel1
-            // 
-            this.radioButtonActivityLevel1.AutoSize = true;
-            this.radioButtonActivityLevel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonActivityLevel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.radioButtonActivityLevel1.Location = new System.Drawing.Point(11, 36);
-            this.radioButtonActivityLevel1.Name = "radioButtonActivityLevel1";
-            this.radioButtonActivityLevel1.Size = new System.Drawing.Size(223, 21);
-            this.radioButtonActivityLevel1.TabIndex = 0;
-            this.radioButtonActivityLevel1.TabStop = true;
-            this.radioButtonActivityLevel1.Text = "Sedentary (little or no exercise)";
-            this.radioButtonActivityLevel1.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonActivityLevel2
-            // 
-            this.radioButtonActivityLevel2.AutoSize = true;
-            this.radioButtonActivityLevel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonActivityLevel2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.radioButtonActivityLevel2.Location = new System.Drawing.Point(11, 70);
-            this.radioButtonActivityLevel2.Name = "radioButtonActivityLevel2";
-            this.radioButtonActivityLevel2.Size = new System.Drawing.Size(195, 21);
-            this.radioButtonActivityLevel2.TabIndex = 1;
-            this.radioButtonActivityLevel2.TabStop = true;
-            this.radioButtonActivityLevel2.Text = "Lightly active (1 to 3 times)";
-            this.radioButtonActivityLevel2.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonActivityLevel3
-            // 
-            this.radioButtonActivityLevel3.AutoSize = true;
-            this.radioButtonActivityLevel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonActivityLevel3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.radioButtonActivityLevel3.Location = new System.Drawing.Point(11, 106);
-            this.radioButtonActivityLevel3.Name = "radioButtonActivityLevel3";
-            this.radioButtonActivityLevel3.Size = new System.Drawing.Size(224, 21);
-            this.radioButtonActivityLevel3.TabIndex = 2;
-            this.radioButtonActivityLevel3.TabStop = true;
-            this.radioButtonActivityLevel3.Text = "Moderately active (3 to 5 times)";
-            this.radioButtonActivityLevel3.UseVisualStyleBackColor = true;
+            this.radioButtonActivityLevel5.AutoSize = true;
+            this.radioButtonActivityLevel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonActivityLevel5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.radioButtonActivityLevel5.Location = new System.Drawing.Point(11, 172);
+            this.radioButtonActivityLevel5.Name = "radioButtonActivityLevel5";
+            this.radioButtonActivityLevel5.Size = new System.Drawing.Size(239, 21);
+            this.radioButtonActivityLevel5.TabIndex = 4;
+            this.radioButtonActivityLevel5.TabStop = true;
+            this.radioButtonActivityLevel5.Text = "Extra active, hard exercises or job";
+            this.radioButtonActivityLevel5.UseVisualStyleBackColor = true;
             // 
             // radioButtonActivityLevel4
             // 
@@ -646,38 +586,90 @@
             this.radioButtonActivityLevel4.Text = "Very active (6 to 7 times) ";
             this.radioButtonActivityLevel4.UseVisualStyleBackColor = true;
             // 
-            // radioButtonActivityLevel5
+            // radioButtonActivityLevel3
             // 
-            this.radioButtonActivityLevel5.AutoSize = true;
-            this.radioButtonActivityLevel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonActivityLevel5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.radioButtonActivityLevel5.Location = new System.Drawing.Point(11, 172);
-            this.radioButtonActivityLevel5.Name = "radioButtonActivityLevel5";
-            this.radioButtonActivityLevel5.Size = new System.Drawing.Size(239, 21);
-            this.radioButtonActivityLevel5.TabIndex = 4;
-            this.radioButtonActivityLevel5.TabStop = true;
-            this.radioButtonActivityLevel5.Text = "Extra active, hard exercises or job";
-            this.radioButtonActivityLevel5.UseVisualStyleBackColor = true;
+            this.radioButtonActivityLevel3.AutoSize = true;
+            this.radioButtonActivityLevel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonActivityLevel3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.radioButtonActivityLevel3.Location = new System.Drawing.Point(11, 106);
+            this.radioButtonActivityLevel3.Name = "radioButtonActivityLevel3";
+            this.radioButtonActivityLevel3.Size = new System.Drawing.Size(224, 21);
+            this.radioButtonActivityLevel3.TabIndex = 2;
+            this.radioButtonActivityLevel3.TabStop = true;
+            this.radioButtonActivityLevel3.Text = "Moderately active (3 to 5 times)";
+            this.radioButtonActivityLevel3.UseVisualStyleBackColor = true;
             // 
-            // listBoxBMR
+            // radioButtonActivityLevel2
             // 
-            this.listBoxBMR.FormattingEnabled = true;
-            this.listBoxBMR.ItemHeight = 18;
-            this.listBoxBMR.Location = new System.Drawing.Point(472, 35);
-            this.listBoxBMR.Name = "listBoxBMR";
-            this.listBoxBMR.Size = new System.Drawing.Size(541, 364);
-            this.listBoxBMR.TabIndex = 6;
+            this.radioButtonActivityLevel2.AutoSize = true;
+            this.radioButtonActivityLevel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonActivityLevel2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.radioButtonActivityLevel2.Location = new System.Drawing.Point(11, 70);
+            this.radioButtonActivityLevel2.Name = "radioButtonActivityLevel2";
+            this.radioButtonActivityLevel2.Size = new System.Drawing.Size(195, 21);
+            this.radioButtonActivityLevel2.TabIndex = 1;
+            this.radioButtonActivityLevel2.TabStop = true;
+            this.radioButtonActivityLevel2.Text = "Lightly active (1 to 3 times)";
+            this.radioButtonActivityLevel2.UseVisualStyleBackColor = true;
             // 
-            // buttonBMRUnselect
+            // radioButtonActivityLevel1
             // 
-            this.buttonBMRUnselect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBMRUnselect.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.buttonBMRUnselect.Location = new System.Drawing.Point(881, 425);
-            this.buttonBMRUnselect.Name = "buttonBMRUnselect";
-            this.buttonBMRUnselect.Size = new System.Drawing.Size(132, 25);
-            this.buttonBMRUnselect.TabIndex = 7;
-            this.buttonBMRUnselect.Text = "Unselect";
-            this.buttonBMRUnselect.UseVisualStyleBackColor = true;
+            this.radioButtonActivityLevel1.AutoSize = true;
+            this.radioButtonActivityLevel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonActivityLevel1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.radioButtonActivityLevel1.Location = new System.Drawing.Point(11, 36);
+            this.radioButtonActivityLevel1.Name = "radioButtonActivityLevel1";
+            this.radioButtonActivityLevel1.Size = new System.Drawing.Size(223, 21);
+            this.radioButtonActivityLevel1.TabIndex = 0;
+            this.radioButtonActivityLevel1.TabStop = true;
+            this.radioButtonActivityLevel1.Text = "Sedentary (little or no exercise)";
+            this.radioButtonActivityLevel1.UseVisualStyleBackColor = true;
+            // 
+            // textBoxBMRAge
+            // 
+            this.textBoxBMRAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBMRAge.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.textBoxBMRAge.Location = new System.Drawing.Point(129, 70);
+            this.textBoxBMRAge.Name = "textBoxBMRAge";
+            this.textBoxBMRAge.Size = new System.Drawing.Size(62, 22);
+            this.textBoxBMRAge.TabIndex = 3;
+            // 
+            // labelBMRAge
+            // 
+            this.labelBMRAge.AutoSize = true;
+            this.labelBMRAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBMRAge.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelBMRAge.Location = new System.Drawing.Point(41, 76);
+            this.labelBMRAge.Name = "labelBMRAge";
+            this.labelBMRAge.Size = new System.Drawing.Size(33, 17);
+            this.labelBMRAge.TabIndex = 2;
+            this.labelBMRAge.Text = "Age";
+            // 
+            // radioButtonBMRMale
+            // 
+            this.radioButtonBMRMale.AutoSize = true;
+            this.radioButtonBMRMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonBMRMale.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.radioButtonBMRMale.Location = new System.Drawing.Point(129, 35);
+            this.radioButtonBMRMale.Name = "radioButtonBMRMale";
+            this.radioButtonBMRMale.Size = new System.Drawing.Size(56, 21);
+            this.radioButtonBMRMale.TabIndex = 1;
+            this.radioButtonBMRMale.TabStop = true;
+            this.radioButtonBMRMale.Text = "Male";
+            this.radioButtonBMRMale.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonBMRFemale
+            // 
+            this.radioButtonBMRFemale.AutoSize = true;
+            this.radioButtonBMRFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonBMRFemale.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.radioButtonBMRFemale.Location = new System.Drawing.Point(27, 36);
+            this.radioButtonBMRFemale.Name = "radioButtonBMRFemale";
+            this.radioButtonBMRFemale.Size = new System.Drawing.Size(72, 21);
+            this.radioButtonBMRFemale.TabIndex = 0;
+            this.radioButtonBMRFemale.TabStop = true;
+            this.radioButtonBMRFemale.Text = "Female";
+            this.radioButtonBMRFemale.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -687,6 +679,7 @@
             this.Controls.Add(this.groupBoxBMR);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupFuel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainForm";
             this.Text = "Universal Calculator";
             this.groupFuel.ResumeLayout(false);
@@ -745,7 +738,6 @@
         private System.Windows.Forms.TextBox textBoxBmiName;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.GroupBox groupBoxBMR;
-        private System.Windows.Forms.Button buttonBMRUnselect;
         private System.Windows.Forms.ListBox listBoxBMR;
         private System.Windows.Forms.Button buttonBMRCalculate;
         private System.Windows.Forms.GroupBox groupBoxActivityLevels;

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Calculators
+
 {   //class is taking care of Body Mass Index calculations 
     class BMICalculator
     {
@@ -12,7 +13,6 @@ namespace Calculators
         private double height = 0;
         private double weight = 0;
         private UnitTypes unit;
-
 
         public void SetName(string name)
         {
@@ -57,13 +57,10 @@ namespace Calculators
             this.unit = value;
         }
 
-
         public UnitTypes GetUnit()
         {
             return unit;
         }
-
-        
 
         //BMI calculation 
         public double BMICalculations()

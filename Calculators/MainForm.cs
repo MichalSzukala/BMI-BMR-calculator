@@ -1,4 +1,7 @@
-﻿using System;
+﻿//Michal Szukala
+//23 October 2017
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +17,7 @@ namespace Calculators
     {
         private BMICalculator bmiCalculator = new BMICalculator();
         private FuelCalculator fuelCalculator = new FuelCalculator();
+        private BMRCalculator bmrCalculator = new BMRCalculator();
 
         public MainForm()
         {
@@ -30,6 +34,8 @@ namespace Calculators
             labelBmiWeight.Text = "Weight (lbs)";
             textBoxBmiHeight.Text = string.Empty;
             textBoxBmiWeight.Text = string.Empty;
+            radioButtonBMRFemale.Checked = true;
+            radioButtonActivityLevel1.Checked = true;
         }
 
         //button BMI calculate event handler
@@ -58,7 +64,7 @@ namespace Calculators
 
             double amountHight = 0.0;
             ok = double.TryParse(strHight, out amountHight);
-            if (ok)
+            if (ok && amountHight > 0.0)
             {
                 bmiCalculator.SetHeight(amountHight);
             }
@@ -79,7 +85,7 @@ namespace Calculators
 
             double amountWeight = 0.0;
             ok = double.TryParse(strWeight, out amountWeight);
-            if (ok)
+            if (ok && amountWeight > 0.0)
                 bmiCalculator.SetWeight(amountWeight);
             else
                 ok = false;
@@ -116,6 +122,7 @@ namespace Calculators
                 labelBmiHight.Text = "Height (cm)";
                 labelBmiWeight.Text = "Weight (kg)";
                 bmiCalculator.SetUnit(UnitTypes.Metric);
+                bmrCalculator.SetUnit(UnitTypes.Metric);
             }
         }
 
@@ -127,6 +134,7 @@ namespace Calculators
                 labelBmiHight.Text = "Height (feet)";
                 labelBmiWeight.Text = "Weight (lbs)";
                 bmiCalculator.SetUnit(UnitTypes.American);
+                bmrCalculator.SetUnit(UnitTypes.American);
             }
         }
 
@@ -179,7 +187,7 @@ namespace Calculators
 
             double previousOdometer = 0.0;
             ok = double.TryParse(strPreviousOdometer, out previousOdometer);
-            if (ok)
+            if (ok && previousOdometer >= 0.0)
             {
                 fuelCalculator.SetPreviousOdometer(previousOdometer);
             }
@@ -201,7 +209,7 @@ namespace Calculators
 
             double amountOfFuel = 0.0;
             ok = double.TryParse(strAmountOfFuel, out amountOfFuel);
-            if (ok)
+            if (ok && amountOfFuel > 0)
             {
                 fuelCalculator.SetAmountOfFuel(amountOfFuel);
             }
@@ -223,7 +231,7 @@ namespace Calculators
 
             double priceOfFuel = 0.0;
             ok = double.TryParse(strPriceOfFuel, out priceOfFuel);
-            if (ok)
+            if (ok && priceOfFuel >= 0)
             {
                 fuelCalculator.SetPriceOfFuel(priceOfFuel);
             }
@@ -246,5 +254,149 @@ namespace Calculators
             labelFuelResults4.Text = fuelCalculator.literPerSwedMil().ToString("0.00");
             labelFuelResultsCost.Text = fuelCalculator.costPerKm().ToString("0.00");
         }
+
+        //button BMR calculate event handler
+        private void buttonBMRCalculate_Click(object sender, EventArgs e)
+        {
+            //bool okBMI = ReadInputBMI();
+            bool okBMR = ReadInputBMR();
+            if (okBMR)
+                DisplayResultsBMR();
+        }
+
+        //will veryfy if input for BMR calculation is correct 
+        private bool ReadInputBMR()
+        {
+            ReadInputBMRGender();
+            ReadInputBMRActivityLevel();
+            bool okAge = ReadInputBMRAge();
+            bool okHeight = ReadInputBMRHeight();
+            bool okWeight = ReadInputBMRWeight();
+            ReadInputBMRName();
+
+            return okAge && okHeight && okWeight;
+        }
+
+        //will take gender input from user and set it for BMRCalculator object
+        private void ReadInputBMRGender()
+        {
+            if (radioButtonBMRFemale.Checked)
+                bmrCalculator.SetGender('F');
+            else
+                bmrCalculator.SetGender('M');
+        }
+
+        //will set up height input for BMRCalculator object
+        private bool ReadInputBMRHeight()
+        {
+
+            bool ok = true;
+            string strHight = textBoxBmiHeight.Text;
+            strHight = strHight.Trim();
+
+            double amountHight = 0.0;
+            ok = double.TryParse(strHight, out amountHight);
+            if (ok && amountHight > 0.0)
+            {
+                bmrCalculator.SetHeight(amountHight);
+            }
+            else
+                ok = false;
+
+            if (!ok)
+                MessageBox.Show("Invalid height", "Error");
+            return ok;
+        }
+
+        //will set up weight of the user for BMRCalculator object
+        private bool ReadInputBMRWeight()
+        {
+            bool ok = true;
+            string strWeight = textBoxBmiWeight.Text;
+            strWeight = strWeight.Trim();
+
+            double amountWeight = 0.0;
+            ok = double.TryParse(strWeight, out amountWeight);
+            if (ok && amountWeight > 0.0)
+                bmrCalculator.SetWeight(amountWeight);
+            else
+                ok = false;
+
+            if (!ok)
+                MessageBox.Show("Invalid weight", "Error");
+            return ok;
+
+        }
+
+        //will set up name of the user for BMRCalculator object
+        private void ReadInputBMRName()
+        {
+            string name = textBoxBmiName.Text;
+            if (name == string.Empty)
+                bmrCalculator.SetName("No name");
+            else
+                bmrCalculator.SetName(name);
+        }
+
+
+
+        //will take ActivityLevel input from user and set it
+        private void ReadInputBMRActivityLevel()
+        {
+            if (radioButtonActivityLevel1.Checked)
+                bmrCalculator.SetActivityLevel(ActivityLevel.Zero);
+            else if (radioButtonActivityLevel2.Checked)
+                bmrCalculator.SetActivityLevel(ActivityLevel.Light);
+            else if (radioButtonActivityLevel3.Checked)
+                bmrCalculator.SetActivityLevel(ActivityLevel.Moderate);
+            else if (radioButtonActivityLevel4.Checked)
+                bmrCalculator.SetActivityLevel(ActivityLevel.Very);
+            else if(radioButtonActivityLevel5.Checked)
+                bmrCalculator.SetActivityLevel(ActivityLevel.VeryMuch);
+
+        }
+
+        //will check age input from user and set it if it's correct
+        private bool ReadInputBMRAge()
+        {
+            bool ok = true;
+            string strAge = textBoxBMRAge.Text;
+            strAge = strAge.Trim();
+
+            int age = 0;
+
+            ok = int.TryParse(strAge, out age);
+            if (ok && age > 0)
+            {
+                bmrCalculator.SetAge(age);
+            }
+            else
+                ok = false;
+
+            if (!ok)
+                MessageBox.Show("Give a age which is positive whole number", "Error");
+
+
+            return ok;
+        }
+        
+        //displaying results on the listBox
+        private void DisplayResultsBMR()
+        {
+            listBoxBMR.Items.Clear();
+            listBoxBMR.Items.Add(string.Format("{0} {1,40}", "BMR RESULTS FOR:", bmrCalculator.GetName()));
+            listBoxBMR.Items.Add(string.Empty);
+            listBoxBMR.Items.Add(string.Format("{0, -70} {1, 30}","YOUR BMR (calories / day)", bmrCalculator.BMRCalculation().ToString("0.0")));
+            listBoxBMR.Items.Add(string.Format("{0, -70}  {1, 30}", "Calories to keep your weight", bmrCalculator.CaloriesToKeepWeigh().ToString("0.0")));
+            listBoxBMR.Items.Add(string.Format("{0, -70}{1, 30}", "Calories to lose 0,5 kg per week", (bmrCalculator.CaloriesToKeepWeigh() - 500).ToString("0.0")));
+            listBoxBMR.Items.Add(string.Format("{0, -70} {1, 30}", "Calories to lose 1 kg per week", (bmrCalculator.CaloriesToKeepWeigh() - 1000).ToString("0.0")));
+            listBoxBMR.Items.Add(string.Format("{0, -70} {1, 30}", "Calories to gain 0,5 kg per week", (bmrCalculator.CaloriesToKeepWeigh() + 500).ToString("0.0")));
+            listBoxBMR.Items.Add(string.Format("{0, -70}  {1, 30}", "Calories to gain 1 kg per week", (bmrCalculator.CaloriesToKeepWeigh() + 1000).ToString("0.0")));
+            listBoxBMR.Items.Add(string.Empty);
+            listBoxBMR.Items.Add("Losing more than 1000 calories per day is to be avoided");
+
+        }
+
+       
     }
 }

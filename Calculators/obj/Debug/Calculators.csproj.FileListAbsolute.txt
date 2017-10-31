@@ -8,3 +8,13 @@ C:\Users\Z\Desktop\Sweden Courses\C#\kody\Modul3\Calculators\Calculators\obj\Deb
 C:\Users\Z\Desktop\Sweden Courses\C#\kody\Modul3\Calculators\Calculators\obj\Debug\Calculators.csproj.CoreCompileInputs.cache
 C:\Users\Z\Desktop\Sweden Courses\C#\kody\Modul3\Calculators\Calculators\obj\Debug\Calculators.exe
 C:\Users\Z\Desktop\Sweden Courses\C#\kody\Modul3\Calculators\Calculators\obj\Debug\Calculators.pdb
+C:\Users\Z\Desktop\to GIT\7\Calculators\obj\Debug\Calculators.csprojResolveAssemblyReference.cache
+C:\Users\Z\Desktop\to GIT\7\Calculators\obj\Debug\Calculators.MainForm.resources
+C:\Users\Z\Desktop\to GIT\7\Calculators\obj\Debug\Calculators.Properties.Resources.resources
+C:\Users\Z\Desktop\to GIT\7\Calculators\obj\Debug\Calculators.csproj.GenerateResource.Cache
+C:\Users\Z\Desktop\to GIT\7\Calculators\obj\Debug\Calculators.csproj.CoreCompileInputs.cache
+C:\Users\Z\Desktop\to GIT\7\Calculators\obj\Debug\Calculators.exe
+C:\Users\Z\Desktop\to GIT\7\Calculators\obj\Debug\Calculators.pdb
+C:\Users\Z\Desktop\to GIT\7\Calculators\bin\Debug\Calculators.exe.config
+C:\Users\Z\Desktop\to GIT\7\Calculators\bin\Debug\Calculators.exe
+C:\Users\Z\Desktop\to GIT\7\Calculators\bin\Debug\Calculators.pdb
