@@ -1,0 +1,10 @@
+C:\Users\Z\Desktop\GitHub\BMI-BMR-calculator\Calculators\bin\Release\Calculators.exe.config
+C:\Users\Z\Desktop\GitHub\BMI-BMR-calculator\Calculators\bin\Release\Calculators.exe
+C:\Users\Z\Desktop\GitHub\BMI-BMR-calculator\Calculators\bin\Release\Calculators.pdb
+C:\Users\Z\Desktop\GitHub\BMI-BMR-calculator\Calculators\obj\Release\Calculators.csprojResolveAssemblyReference.cache
+C:\Users\Z\Desktop\GitHub\BMI-BMR-calculator\Calculators\obj\Release\Calculators.MainForm.resources
+C:\Users\Z\Desktop\GitHub\BMI-BMR-calculator\Calculators\obj\Release\Calculators.Properties.Resources.resources
+C:\Users\Z\Desktop\GitHub\BMI-BMR-calculator\Calculators\obj\Release\Calculators.csproj.GenerateResource.Cache
+C:\Users\Z\Desktop\GitHub\BMI-BMR-calculator\Calculators\obj\Release\Calculators.csproj.CoreCompileInputs.cache
+C:\Users\Z\Desktop\GitHub\BMI-BMR-calculator\Calculators\obj\Release\Calculators.exe
+C:\Users\Z\Desktop\GitHub\BMI-BMR-calculator\Calculators\obj\Release\Calculators.pdb
